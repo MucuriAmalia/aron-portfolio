@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aron Ndungu | Portfolio</title>
+  <meta name="description" content="Aron Ndungu — Software Developer • Analyst • Operations & Compliance-minded professional. Java Spring, JSP/Spring MVC, Reporting, Data, and Admin support." />
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:#111827;
+      --muted:#9aa4b2;
+      --text:#e7edf5;
+      --brand:#7c3aed;
+      --brand2:#22c55e;
+      --line:rgba(255,255,255,.08);
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(124,58,237,.25), transparent 60%),
+                  radial-gradient(1000px 600px at 90% 20%, rgba(34,197,94,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:1080px; margin:0 auto; padding:28px 18px 80px}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 16px; border:1px solid var(--line);
+      border-radius:999px; background:rgba(17,24,39,.55); backdrop-filter: blur(8px);
+      position:sticky; top:14px; z-index:10;
+    }
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700}
+    .dot{
+      width:12px; height:12px; border-radius:999px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 0 0 6px rgba(124,58,237,.12);
+    }
+    .nav{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end}
+    .nav a{
+      text-decoration:none; font-size:14px; color:var(--muted);
+      padding:8px 10px; border-radius:999px; border:1px solid transparent;
+    }
+    .nav a:hover{color:var(--text); border-color:var(--line); background:rgba(255,255,255,.03)}
+    .hero{
+      display:grid; grid-template-columns: 1.15fr .85fr;
+      gap:18px; margin-top:18px;
+    }
+    .card{
+      border:1px solid var(--line); background:rgba(17,24,39,.55);
+      border-radius:var(--radius); box-shadow:var(--shadow);
+      padding:22px; backdrop-filter: blur(8px);
+    }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      color:var(--muted); font-size:14px;
+    }
+    .pill{
+      border:1px solid var(--line); border-radius:999px;
+      padding:7px 10px; font-size:12px; color:var(--muted);
+      background:rgba(255,255,255,.03);
+    }
+    h1{margin:10px 0 10px; font-size:42px; line-height:1.1}
+    .sub{color:var(--muted); font-size:16px; margin:0 0 16px}
+    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:11px 14px; border-radius:12px; border:1px solid var(--line);
+      text-decoration:none; font-weight:600; font-size:14px;
+      background:rgba(255,255,255,.03);
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(124,58,237,.9), rgba(34,197,94,.65));
+      border-color: transparent;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .grid{
+      display:grid; grid-template-columns: repeat(12, 1fr);
+      gap:18px; margin-top:18px;
+    }
+    .col-6{grid-column: span 6}
+    .col-4{grid-column: span 4}
+    .col-8{grid-column: span 8}
+    .col-12{grid-column: span 12}
+    h2{margin:0 0 10px; font-size:22px}
+    .muted{color:var(--muted)}
+    ul{margin:10px 0 0; padding-left:18px}
+    li{margin:7px 0}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .tag{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      padding:6px 9px; border-radius:999px;
+      font-size:12px; color:var(--muted);
+    }
+    .proj{
+      display:flex; flex-direction:column; gap:8px;
+      padding:16px; border-radius:16px; border:1px solid var(--line);
+      background:rgba(0,0,0,.12);
+    }
+    .proj h3{margin:0; font-size:16px}
+    .proj p{margin:0; color:var(--muted); font-size:14px}
+    .footer{
+      margin-top:26px; text-align:center; color:var(--muted); font-size:13px;
+    }
+    .avatar{
+      width:100%; aspect-ratio: 4/3; border-radius:16px;
+      border:1px dashed rgba(255,255,255,.18);
+      display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(124,58,237,.10), rgba(34,197,94,.08));
+      color:var(--muted);
+      overflow:hidden;
+    }
+    .avatar small{display:block; max-width:260px; text-align:center}
+    .note{
+      margin-top:10px; font-size:13px; color:var(--muted);
+      border-top:1px solid var(--line); padding-top:12px;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:36px}
+      .col-6,.col-4,.col-8{grid-column: span 12}
+      .topbar{position:relative; top:auto}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand"><span class="dot"></span> Aron Ndungu</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <section class="hero">
+      <div class="card">
+        <div class="kicker">
+          <span class="pill">Software • Analysis • Ops</span>
+          <span class="pill">Nairobi / Kenya</span>
+          <span class="pill">Open to roles</span>
+        </div>
+        <h1>Building systems, reports, and calm out of chaos.</h1>
+        <p class="sub">
+          I’m Aron — a Java/Spring developer with a strong admin + operations mindset,
+          comfortable with data, reporting (Jasper), and structured processes.
+          I’m actively pursuing roles in <b>administration</b>, <b>operations</b>, <b>analysis</b>, and <b>entry-level audit/compliance</b>.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">📩 Contact Me</a>
+          <a class="btn" href="#" onclick="alert('Replace this link with your CV PDF URL when ready.'); return false;">⬇️ Download CV</a>
+          <a class="btn" href="#projects">🧩 View Projects</a>
+        </div>
+
+        <div class="note">
+          <b>Fun fact:</b> I’m rebuilding my savings discipline — consistent investing, consistent effort, and no shortcuts.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="avatar">
+          <div>
+            <div style="font-weight:700; font-size:16px; margin-bottom:8px;">Caricature Spot</div>
+            <small>
+              Add your caricature image here later (replace this box with an &lt;img&gt; tag).
+              I can also design the banner version for LinkedIn.
+            </small>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag">Java • Spring Boot</span>
+          <span class="tag">JSP/Spring MVC</span>
+          <span class="tag">JasperReports</span>
+          <span class="tag">Data & Documentation</span>
+          <span class="tag">Govt Applications</span>
+          <span class="tag">Process & Controls</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="grid">
+      <div class="card col-8">
+        <h2>About</h2>
+        <p class="muted">
+          I enjoy work that rewards discipline: clean documentation, accurate records, reliable systems,
+          and reports that actually help decision-making.
+        </p>
+        <ul>
+          <li>Experience supporting systems and teams with structured processes and reporting.</li>
+          <li>Comfortable translating “what users need” into workable tools and documentation.</li>
+          <li>Currently focused on getting into a stable role where I can grow long-term.</li>
+        </ul>
+      </div>
+
+      <div class="card col-4">
+        <h2>Quick Wins I Bring</h2>
+        <ul>
+          <li>Clear communication + follow-through</li>
+          <li>Organized records & filing habits</li>
+          <li>Reporting mindset (accuracy first)</li>
+          <li>Fast learning in new environments</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="grid">
+      <div class="card col-6">
+        <h2>Skills</h2>
+        <ul>
+          <li><b>Software:</b> Java, Spring Boot, JSP/Spring MVC, JavaScript, HTML/CSS</li>
+          <li><b>Reporting:</b> JasperReports / Jasper Studio (report templates, export, integration)</li>
+          <li><b>Data & Ops:</b> Documentation, registers, records management, reconciliation mindset</li>
+          <li><b>Tools:</b> DBeaver, Git basics, Google Workspace</li>
+        </ul>
+      </div>
+
+      <div class="card col-6">
+        <h2>Roles I’m Targeting</h2>
+        <div class="tags">
+          <span class="tag">Administrative Assistant</span>
+          <span class="tag">Operations / Registry</span>
+          <span class="tag">Research / Data Assistant</span>
+          <span class="tag">Business Analyst (Entry)</span>
+          <span class="tag">Audit / Compliance (Entry)</span>
+          <span class="tag">ICT / Systems Support</span>
+        </div>
+        <p class="muted" style="margin-top:10px">
+          I’m flexible — I want a role where I can contribute immediately and grow.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="grid">
+      <div class="card col-12">
+        <h2>Projects</h2>
+        <div class="grid" style="margin-top:12px">
+          <div class="proj col-6">
+            <h3>Bancassurance System Work (Spring + Reporting)</h3>
+            <p>Built and supported web modules, documentation, and reporting workflows using Java/Spring + Jasper.</p>
+            <div class="tags">
+              <span class="tag">Spring MVC</span><span class="tag">Jasper</span><span class="tag">DB Work</span>
+            </div>
+          </div>
+          <div class="proj col-6">
+            <h3>Refunds Module: Forms, Uploads, Validation</h3>
+            <p>Worked with JSP modals, document requirements, boolean handling, and process/view flows.</p>
+            <div class="tags">
+              <span class="tag">JSP</span><span class="tag">Backend logic</span><span class="tag">UI workflows</span>
+            </div>
+          </div>
+          <div class="proj col-6">
+            <h3>Reporting Delivery Improvements</h3>
+            <p>Handled timestamped report filenames/URLs and consistent export behavior in a reporting pipeline.</p>
+            <div class="tags">
+              <span class="tag">JasperReports</span><span class="tag">Spring</span><span class="tag">Automation mindset</span>
+            </div>
+          </div>
+          <div class="proj col-6">
+            <h3>Google Workspace Adoption Support (Assessment Writeup)</h3>
+            <p>Analyzed user adoption challenges and proposed practical training/onboarding actions.</p>
+            <div class="tags">
+              <span class="tag">Analysis</span><span class="tag">Customer support</span><span class="tag">Documentation</span>
+            </div>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:14px">
+          Tip: Replace these project summaries with links (GitHub, Google Drive PDF, or screenshots) as you build your portfolio.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" class="grid">
+      <div class="card col-12">
+        <h2>Experience</h2>
+        <p class="muted">Add your real company names and dates here (I kept it clean and safe for now).</p>
+        <ul>
+          <li><b>Software Developer / Systems Support</b> — Delivered features, maintained modules, produced reports, and supported users.</li>
+          <li><b>Operations mindset</b> — Strong at records, filing, accuracy, and structured follow-ups.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="grid">
+      <div class="card col-6">
+        <h2>Contact</h2>
+        <p class="muted">Replace with your real email/phone links.</p>
+        <ul>
+          <li>Email: <a href="#" onclick="alert('Replace this with your email address.'); return false;">yourname@email.com</a></li>
+          <li>Phone: <a href="#" onclick="alert('Replace this with your phone number.'); return false;">+254 ...</a></li>
+          <li>LinkedIn: <a href="#" onclick="alert('Replace with your LinkedIn URL.'); return false;">linkedin.com/in/...</a></li>
+        </ul>
+      </div>
+
+      <div class="card col-6">
+        <h2>Mini Bio (for LinkedIn / CV)</h2>
+        <p class="muted">
+          “I’m a disciplined and adaptable professional with experience in Java/Spring development and reporting,
+          strong documentation habits, and an operations-first mindset. I enjoy roles that require accuracy,
+          structure, and accountability — from administrative support to analysis and entry-level audit/compliance.”
+        </p>
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> Aron Ndungu • Built with focus + consistency
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
